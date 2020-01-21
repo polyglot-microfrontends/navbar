@@ -1,0 +1,44 @@
+.primaryNav {
+  height: var(--navbar-height);
+  width: 100vw;
+  background-color: #35495e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.primaryNav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  height: 100%;
+}
+
+.primaryNav li {
+  list-style: none;
+  height: 100%;
+}
+
+.navLink,
+.navLink:focus,
+.navLink:visited {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-height: var(--navbar-height);
+  padding: 0.8rem 1.6rem;
+}
+
+.navLink:hover {
+  background-color: #243241;
+}
+
+.activeNavLink {
+  background-color: #202d3a;
+}

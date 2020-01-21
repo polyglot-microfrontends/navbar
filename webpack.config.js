@@ -9,8 +9,24 @@ module.exports = webpackConfigEnv => {
   });
 
   return webpackMerge.smart(defaultConfig, {
-    output: {
-      filename: "polyglot-mf-navbar.js"
+    module: {
+      rules: [
+        {
+          test: /\.css/,
+          exclude: /node_modules/,
+          use: [
+            "style-loader",
+            {
+              loader: "css-loader",
+              options: {
+                modules: {
+                  localIdentName: "navbar__[local]--[hash:base64:5]"
+                }
+              }
+            }
+          ]
+        }
+      ]
     }
   });
 };

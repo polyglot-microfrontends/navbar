@@ -24,7 +24,7 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "concurrently": "^5.0.1",
-    "css-loader": "^3.3.2",
+    "css-loader": "^3.4.2",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-react-important-stuff": "^2.0.0",
@@ -36,16 +36,18 @@
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
     "single-spa-react": "^2.10.4",
-    "style-loader": "^1.0.1",
+    "style-loader": "^1.1.3",
     "systemjs-webpack-interop": "^1.1.2",
     "webpack": "^4.41.2",
-    "webpack-config-single-spa-react": "^1.0.3",
-    "webpack-merge": "^4.2.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-config-single-spa-react": "^1.0.3",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2"
   }
 }
