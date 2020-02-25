@@ -1,6 +1,6 @@
 # Polyglot Microfrontends navbar
 
-The navbar single-spa application
+[![CircleCI](https://circleci.com/gh/polyglot-microfrontends/navbar.svg?style=svg)](https://circleci.com/gh/polyglot-microfrontends/navbar)
 
 ## What is this?
 
