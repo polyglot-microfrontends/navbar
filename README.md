@@ -39,7 +39,7 @@ Note that the port defaults to 8080, but may change if 8080 is unavailable. Go t
 Now, go to https://polyglot.microfrontends.app. In the browser console, run the following:
 
 ```js
-localStorage.setItem('devtools', true);
+localStorage.setItem("devtools", true);
 ```
 
 Refresh the page. Click on the tan / beige rectangle:

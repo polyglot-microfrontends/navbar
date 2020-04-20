@@ -1,11 +1,11 @@
 const webpackMerge = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-react");
 
-module.exports = webpackConfigEnv => {
+module.exports = (webpackConfigEnv) => {
   const defaultConfig = singleSpaDefaults({
     orgName: "polyglot-mf",
     projectName: "navbar",
-    webpackConfigEnv
+    webpackConfigEnv,
   });
 
   return webpackMerge.smart(defaultConfig, {
@@ -20,13 +20,13 @@ module.exports = webpackConfigEnv => {
               loader: "css-loader",
               options: {
                 modules: {
-                  localIdentName: "navbar__[local]--[hash:base64:5]"
-                }
-              }
-            }
-          ]
-        }
-      ]
-    }
+                  localIdentName: "navbar__[local]--[hash:base64:5]",
+                },
+              },
+            },
+          ],
+        },
+      ],
+    },
   });
 };
