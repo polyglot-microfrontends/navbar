@@ -1,4 +1,4 @@
-const webpackMerge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-react");
 
 module.exports = (webpackConfigEnv) => {
@@ -8,25 +8,11 @@ module.exports = (webpackConfigEnv) => {
     webpackConfigEnv,
   });
 
-  return webpackMerge.smart(defaultConfig, {
-    module: {
-      rules: [
-        {
-          test: /\.css/,
-          exclude: /node_modules/,
-          use: [
-            "style-loader",
-            {
-              loader: "css-loader",
-              options: {
-                modules: {
-                  localIdentName: "navbar__[local]--[hash:base64:5]",
-                },
-              },
-            },
-          ],
-        },
-      ],
-    },
-  });
+  const cssRule = defaultConfig.module.rules.find(
+    (r) =>
+      Array.isArray(r.use) && r.use.some((u) => u.loader.includes("css-loader"))
+  );
+  cssRule.use[1].options.modules = true;
+
+  return merge(defaultConfig, {});
 };
